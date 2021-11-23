@@ -17,6 +17,8 @@
     />
     <link href="http://fonts.cdnfonts.com/css/gordita" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 </head>
 
 <body>
@@ -62,13 +64,13 @@
             <h6><a href="//twitter.com" target="_blank">Tw.</a></h6>
             <h6><a href="//instagram.com" target="_blank">Inst.</a></h6>
         </div>
-        <div class="consult">
+        <div class="consult bannerImg animate__animated animate__fadeInLeft" style="animation-duration: 2s">
             <p class="consultHeading">Smart Consulting Group.</p>
             <p class="consultDesc mt-2">We helping client to create technology that uses Blockchain, AI and IOT with our talented expert.</p>
             <button class="border: 2px solid black bg-transparent px-4 py-2 mt-3" type="button" class="btn btn-light">Consult with an exprt now!</button>
             <h6 class="mt-2"><span style="opacity: 0.6">Already a member?</span> Sign in</h6>
         </div>
-        <div class="bannerImg">
+        <div class="bannerImg animate__animated animate__fadeInRight" style="animation-duration: 2s">
             <img src="./assets/Right.png" alt="">
         </div>
         <div class="scrollPoint">
@@ -215,56 +217,51 @@
 
         <div class="carouselItems row slider" style="width: 95%; margin: 0 auto">
             <div class="card">
-                <div class="check py-3">
-                    <img src="..." class="card-img-top" alt="...">
-                    <br><br>
+                <div class="check">
+                    <div class="img"></div>
                     <div class="card-body textContent">
-                        <p class="cardHeader">Best selling plugin.</p>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h3>Best selling plugin.</h3>
+                        <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
             </div>
 
             <div class="card">
-                <div class="check py-3">
-                    <img src="..." class="card-img-top" alt="...">
-                    <br><br>
+                <div class="check">
+                    <div class="img"></div>
                     <div class="card-body textContent">
-                        <p class="cardHeader">Best Service Provider.</p>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h3>Best Service.</h3>
+                        <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
             </div>
 
             <div class="card ">
-                <div class="check py-3">
-                    <img src="..." class="card-img-top" alt="...">
-                    <br><br>
+                <div class="check">
+                    <div class="img"></div>
                     <div class="card-body textContent">
-                        <p class="cardHeader">Highly Train Expert.</p>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h3>Highly Train Expert.</h3>
+                        <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
             </div>
 
             <div class="card">
-                <div class="check py-3">
-                    <img src="..." class="card-img-top" alt="...">
-                    <br><br>
+                <div class="check">
+                    <div class="img"></div>
                     <div class="card-body textContent">
-                        <p class="cardHeader">WP Award winner.</p>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h3>WP Award winner.</h3>
+                        <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
             </div>
 
             <div class="card ">
-                <div class="check py-3">
-                    <img src="..." class="card-img-top" alt="...">
-                    <br><br>
+                <div class="check">
+                    <div class="img"></div>
                     <div class="card-body textContent">
-                        <p class="cardHeader">WP Award winner.</p>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h3>WP Award winner.</h3>
+                        <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
             </div>
@@ -276,8 +273,27 @@
 
     <section class="chooseCP container mx-auto ">
         <div class="optionContent ">
-            <i class="fas fa-play playIcon "></i>
-            <!-- <iframe class="frame" src="https://www.youtube.com/watch?v=PPukHsOH_BI" width="200" height="200"></iframe> -->
+            <button class="play-button" onclick="openVideo()">
+                <svg width="35" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="35" r="29.5" fill="black" stroke="black"/>
+                    <circle cx="32.5" cy="32.5" r="32" fill="black" stroke="black"/>
+                    <path d="M44.0296 28.7454C46.3493 30.3637 46.3025 33.8127 43.9397 35.3674L33.0676 42.5216C30.4158 44.2666 26.8857 42.3756 26.8689 39.2013L26.7907 24.4078C26.7736 21.165 30.4197 19.2506 33.0793 21.1061L44.0296 28.7454Z" stroke="white" stroke-width="2"/>
+                </svg>
+            </button>
+            <div class="blur" id="video-modal">
+                <div style="position:absolute; top:20px;right:30px;">
+                    <button onclick="closeVideo()" style="background-color: #00000000;cursor: pointer;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                    
+                    </button>
+                </div>
+                <div class="video-modal">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/OvfDLT_qA60" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+            </div>
             <p class="query ">Why Choose <br> Code Partner?</p>
             <p>So how does it work? Let’s check our Getting Started <br> tutorial for detailed info.</p>
             <div class="optionOne ">
@@ -408,8 +424,8 @@
             <p class="footerHead ">NEWSLETTER</p>
             <p>Join over <span class="people ">68,000 people</span> getting our emails</p>
             <div class="input ">
-                <input type="email " name=" " id=" " placeholder="Enter your email ">
-                <button type="button " class="btn btn-dark ms-2 my-1 ">Sign Up</button>
+                <input type="email " class="ms-2" name=" " id=" " placeholder="Enter your email ">
+                <button type="button " class="btn btn-dark  my-1 ">Sign Up</button>
             </div>
             <p class="emailBasis ">We only send interesting and relevant emails.</p>
         </div>
@@ -436,14 +452,11 @@
 
     </section>
 
-
-
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script> -->
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
-    // jquery cdn
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 

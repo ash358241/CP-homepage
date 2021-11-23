@@ -1,7 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    /* font-family: 'Gordita', sans-serif; */
+    font-family: 'Gordita', sans-serif;
+    box-sizing: border-box;
 }
 
 body {}
@@ -144,6 +145,10 @@ body {}
     margin-bottom: 100px;
 }
 
+.successHeader {
+    padding-bottom: 50px;
+}
+
 .successHeading {
     font-size: 72px;
     line-height: 90.6px;
@@ -151,14 +156,28 @@ body {}
 }
 
 .check {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.544058) 62%, rgba(0, 0, 0, 0.615498) 100%);
     color: white;
+    height: 450px;
+    position: relative;
+}
+
+.img {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.358835) 50.1%, rgba(0, 0, 0, 0.615498) 100%), url("./assets/landing.jpg");
+    background-size: cover;
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
 .textContent {
     width: 95%;
-    margin: 0 auto;
-    transition: all 5s ease;
+    margin: 5px auto;
+    /* transition: all 5s ease; */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .cardHeader {
@@ -168,14 +187,14 @@ body {}
 }
 
 .card-text {
-    font-size: 20px;
+    /* font-size: 20px; */
     line-height: 35px;
 }
 
 .card:hover .textContent {
     background: linear-gradient(156.86deg, #0F64D6 -21.76%, #0CBCFC 107.41%);
     width: 95%;
-    margin: 0 auto;
+    margin: 5px auto;
     color: white;
 }
 
@@ -183,6 +202,28 @@ body {}
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.play-button {
+    background-color: #00000000;
+    border: none;
+    cursor: pointer;
+}
+
+.blur {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    background-color: #00000093;
+}
+
+.video-modal {
+    width: 100%;
+    height: 95vh;
+    padding: 5%;
+    /* background-color: #000000; */
 }
 
 .playIcon {
@@ -343,11 +384,11 @@ body {}
 .input {
     background-color: #EEEEEE;
     border: 2px solid #e6e6e6;
-    /* width: 80%; */
+    display: flex;
+    align-items: center;
 }
 
 .input input {
-    padding: 5px;
     border: none;
     background: transparent;
 }
@@ -419,6 +460,7 @@ body {}
     transform: rotate(-90deg);
     left: -1%;
     top: 50%;
+    z-index: 1;
 }
 
 .scrollPoint {
@@ -426,13 +468,14 @@ body {}
     display: flex;
     transform: rotate(-90deg);
     top: 50%;
-    right: 2%
+    right: 2%;
+    z-index: 1;
 }
 
 .chat {
     position: fixed;
     top: 88%;
-    right: 2%
+    right: 3%
 }
 
 .socialLinks a {

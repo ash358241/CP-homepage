@@ -29,3 +29,17 @@ $('.slider').slick({
         }
     ]
 });
+
+
+let videoElement = document.getElementById("video-modal");
+videoElement.style.display = "none";
+
+function openVideo() {
+    let videoElement = document.getElementById("video-modal");
+    videoElement.style.display = "block";
+}
+
+function closeVideo() {
+    let videoElement = document.getElementById("video-modal");
+    videoElement.style.display = "none";
+}
