@@ -238,7 +238,7 @@
 }
 
 .image {
-    width: 40%;
+    width: 50%;
 }
 
 .image img {
@@ -369,9 +369,10 @@
 
 .input {
     background-color: #EEEEEE;
-    border: 2px solid #e6e6e6;
+    border-radius: 5px;
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .input input {
@@ -425,6 +426,11 @@
     justify-content: space-between;
     align-items: center;
     height: 90vh;
+}
+
+.consult {
+    width: 80%;
+    margin: 0 auto;
 }
 
 .consultHeading {
@@ -506,7 +512,12 @@
     font-weight: 500;
     line-height: 25.65px;
     list-style-type: none;
-    margin-left: 20px;
+    margin-left: 25px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #000;
 }
 
 .login-icon {
@@ -565,12 +576,15 @@
 
 @media(max-width: 668px) {
     .consultHeading {
-        font-size: 70px;
+        font-size: 60px;
         line-height: 80px;
     }
     .banner {
         flex-direction: column;
         margin-bottom: 400px;
+    }
+    .socialLinks {
+        left: -10%;
     }
     .bannerImg img {
         width: 100%;
@@ -590,6 +604,14 @@
     .solution {
         flex-direction: column;
     }
+    .solutionHeading {
+        font-size: 60px;
+    }
+    .solutionHeading,
+    .solutionDescription {
+        width: 80%;
+        margin: 0 auto;
+    }
     .technologies {
         flex-direction: column;
     }
@@ -600,14 +622,35 @@
     .milestone {
         flex-direction: column;
     }
+    .successHeader {
+        width: 80%;
+        margin: 0 auto;
+    }
     .chooseCP {
         flex-direction: column;
+    }
+    .query {
+        font-size: 60px;
+    }
+    .successHeading {
+        font-size: 60px;
+    }
+    .optionContent {
+        width: 80%;
+        margin: 0 auto;
     }
     .image {
         width: 100%;
     }
     .coreMembers {
         flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .coreHeading {
+        font-size: 60px;
+        width: 80%;
+        margin: 0 auto;
     }
     .feedback {
         flex-direction: column;
@@ -618,6 +661,9 @@
     .partners {
         flex-wrap: wrap;
     }
+    .partnerHeading {
+        font-size: 60px;
+    }
     .ourPartner {
         flex-direction: column;
     }
@@ -626,6 +672,21 @@
     }
     .skillElite {
         flex-wrap: wrap;
+    }
+    .footer .col-md-3 {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .input {
+        flex-wrap: wrap;
+    }
+    .input input {
+        margin-bottom: 5px;
+        padding: 5px;
+    }
+    .input button {
+        margin-left: 10px;
+        padding: 5px;
     }
     .footerEnd {
         flex-direction: column;
